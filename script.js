@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simple Slideshow
     const slideImg = document.getElementById('slide-img');
-    const images = ['assets/images/photo1.jpg', 'assets/images/photo2.jpg', 'assets/images/photo3.jpg','assets/images/photo4.jpg','assets/images/photo5.jpg','assets/images/photo6.jpg']; // உங்கள் படங்கள்
+    const images = ['Placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg','placeholder4.jpg','placeholder5.jpg','placeholder6.jpg']; // உங்கள் படங்கள்
     let currentSlide = 0;
     setInterval(() => {
         if(slideImg && !giftModal.classList.contains('hidden')) {
