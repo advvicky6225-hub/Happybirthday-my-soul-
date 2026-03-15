@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Beautiful Memories</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body style="overflow-y: auto;">
+    <div id="stars"></div>
+    <div id="hearts-container"></div>
+    
+    <div class="page-container">
+        <header class="page-header">
+            <h1 class="title" style="font-size: 3rem;">Our Beautiful Memories</h1>
+            <p class="subtitle">Cherishing every moment spent with you ❤️</p>
+            <a href="index.html" class="glass-btn">Back to Home</a>
+        </header>
+
+        <section class="gallery-grid">
+            <!-- Dynamically or statically add images -->
+            <div class="photo-card">
+                <img src="assets/images/placeholder1.jpg" alt="Memory 1">
+                <div class="photo-overlay">Among all the pictures in the world, this one is special… because this is the moment I first admired you and slowly became close to you</div>
+            </div>
+            <div class="photo-card">
+                <img src="assets/images/placeholder2.jpg" alt="Memory 2">
+                <div class="photo-overlay">The moment I saw you, it felt like a living poem</div>
+            </div>
+            <div class="photo-card">
+                <img src="assets/images/placeholder3.jpg" alt="Memory 3">
+                <div class="photo-overlay">My favorite pose of yours stood like a copper statue in grace </div>
+            </div>
+            <div class="photo-card">
+                <img src="assets/images/placeholder4.jpg" alt="Memory 4">
+                <div class="photo-overlay">That one look changed my heart forever பார்வையும் போதையாயிற்றே</div>
+            </div>
+            <div class="photo-card">
+                <img src="assets/images/placeholder5.jpg" alt="Memory 5">
+                <div class="photo-overlay">That bus carried  our laughter our tears and the beginning of our love</div>
+            </div>
+            <div class="photo-card">
+                <img src="assets/images/placeholder6.jpg" alt="Memory 6">
+                <div class="photo-overlay">No matter how many fights we had our childish moments turned into laughter with you  memories I can never forget</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reusing script for stars and hearts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 150; i++) {
+                let star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = star.style.height = Math.random() * 3 + 'px';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                star.style.animationDelay = (Math.random() * 2) + 's';
+                starsContainer.appendChild(star);
+            }
+            const heartsContainer = document.getElementById('hearts-container');
+            function createHeart() {
+                let heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.max(document.body.scrollHeight, window.innerHeight) + 'px';
+                heart.style.transform = `scale(${Math.random() * 0.5 + 0.5}) rotate(-45deg)`;
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                heartsContainer.appendChild(heart);
+                setTimeout(() => heart.remove(), 10000);
+            }
+            setInterval(createHeart, 800);
+        });
+    </script>
+</body>
+</html>

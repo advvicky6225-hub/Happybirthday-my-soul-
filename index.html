@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background animations -->
+    <div id="stars"></div>
+    <div id="hearts-container"></div>
+    <div id="confetti-container"></div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Login Section -->
+    <section id="login-section" class="screen active">
+        <div class="glass-card text-center">
+            <h1 class="title">Happy Birthday My Love 🎂</h1>
+            <p class="subtitle">You are the most beautiful chapter of my life ❤️</p>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+                <button id="unlock-btn" class="glow-btn">Unlock Surprise</button>
+            </div>
+            <p id="error-msg" class="hidden">Incorrect password, try again my love.</p>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section id="surprise-section" class="screen hidden">
+        <canvas id="fireworks-canvas"></canvas>
+        <div class="content-wrapper">
+            <!-- Countdown -->
+            <div class="countdown-glass">
+                <h3>Countdown to Your Special Day</h3>
+                <div id="countdown" class="timer"></div>
+            </div>
+
+            <!-- Gift Box -->
+            <div class="gift-container" id="gift-box">
+                <div class="gift">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box-body"></div>
+                </div>
+            </div>
+            <p class="pulse-text" id="gift-instruction">Click to open your gift &hearts;</p>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="gallery.html" class="glass-btn">Our Beautiful Memories</a>
+                <a href="story.html" class="glass-btn">Our Love Story</a>
+                <button id="read-letter-btn" class="glass-btn">Read My Letter ❤️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Opened Modal -->
+    <div id="gift-modal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <span class="close-btn" id="close-gift">&times;</span>
+            <div class="media-container">
+                <!-- Video Section -->
+                <div class="video-wrapper">
+                    <video controls id="surprise-video">
+                        <source src="assets/videos/surprise.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Slideshow Section -->
+                <div class="slideshow-wrapper">
+                    <img id="slide-img" src="assets/images/placeholder1.jpg" alt="Love memory">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Love Letter Popup -->
+    <div id="letter-modal" class="modal hidden">
+        <div class="modal-content glass-card letter-style">
+            <span class="close-btn" id="close-letter">&times;</span>
+            <h2 class="letter-title">My Dearest,</h2>
+            <div class="letter-body">
+                <p>Happy Birthday to the most amazing person in my life.</p>
+                <p>Every day with you feels like a dream come true. Your smile lights up my darkest days, and your love
+                    gives me strength.</p>
+                <p>I created this little surprise for you to remind you of how much you mean to me. You are truly the
+                    most beautiful chapter of my life.</p>
+                <p>I promise to love you, cherish you, and stand by your side forever.</p>
+                <p class="signature">Forever Yours, <br>❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
